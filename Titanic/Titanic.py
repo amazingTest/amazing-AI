@@ -23,7 +23,7 @@ training_set_inputs = array(training_set_inputs)
 training_set_outputs = array(training_set_outputs).T
 # 清除不必要的特征
 training_set_inputs = delete(training_set_inputs, [0, 1, 3, 8], axis=1)
-# 设置初始权重
+# 设置初始权重m
 random.seed(1)
 synaptic_weights = 2 * random.random((9, 1)) - 1
 # 训练模型

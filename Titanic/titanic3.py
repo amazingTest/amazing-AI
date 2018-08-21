@@ -21,7 +21,9 @@ X['Age'].fillna(X['Age'].mean(), inplace=True)
 
 # 数据分割。
 from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=33)
+X_train, X_test, y_train, y_test = train_te
+st_split(X, y, test_size=0.25, random_state=33)
+
 
 # 我们使用scikit-learn.feature_extraction中的特征转换器，详见3.1.1.1特征抽取。
 from sklearn.feature_extraction import DictVectorizer
