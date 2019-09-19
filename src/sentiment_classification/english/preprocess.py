@@ -71,12 +71,31 @@ def vectorize(questions, word2vec_path='G:/MachineLearning/word2vec/word2vec_wx'
 
 
 def get_texts_and_labels():
+    texts = []
+    labels = []
 
-    df = pd.read_csv(r'G:/MachineLearning/DataSet/sentiment_classification/english/englishSentiment.xls.csv',
-                     encoding='ISO-8859-1',
-                     names=['label', '1', '2', '3', '4', 'text'])
+    with open('./data/sentiment labelled sentences/amazon_cells_labelled.txt') as data:
+        for line in data.readlines():
+            texts.append(line.strip()[:-1].replace('\t', ''))
+            labels.append(int(line.strip()[-1]))
 
-    return vectorize(df['text']), df['label']
+    with open('./data/sentiment labelled sentences/imdb_labelled.txt') as data:
+        for line in data.readlines():
+            texts.append(line.strip()[:-1].replace('\t', ''))
+            labels.append(int(line.strip()[-1]))
+
+    with open('./data/sentiment labelled sentences/yelp_labelled.txt') as data:
+        for line in data.readlines():
+            texts.append(line.strip()[:-1].replace('\t', ''))
+            labels.append(int(line.strip()[-1]))
+
+    return vectorize(texts), labels
+
+    # df = pd.read_csv(r'G:/MachineLearning/DataSet/sentiment_classification/english/englishSentiment.xls.csv',
+    #                  encoding='ISO-8859-1',
+    #                  names=['label', '1', '2', '3', '4', 'text'])
+    #
+    # return vectorize(df['text']), df['label']
 
 
 # def word_count(words, word_num=50):

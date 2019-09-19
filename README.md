@@ -8,5 +8,7 @@
 
     pip install -r requirement.txt
 
+下载 word2vec 模型文件，然后放至 'G:/MachineLearning/' 路径下
+
 然后即可进入 **src** 找寻你喜欢的模型进行训练 / 使用。
 
