@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from keras.layers import Bidirectional
 from keras.callbacks import EarlyStopping
 # from imblearn.over_sampling import SMOTE
-from sentiment_classification.english import preprocess
+from src.sentiment_classification.english import preprocess
 # 优化方法选用Adam(其实可选项有很多，如SGD)
 from keras.optimizers import Adam
 from keras.layers.core import *
@@ -39,7 +39,7 @@ class Metrics(Callback):
 _metrics = Metrics()
 
 INPUT_DIM = 256
-TIME_STEPS = 62
+TIME_STEPS = 54
 # if True, the attention vector is shared across the input_dimensions where the attention is applied.
 SINGLE_ATTENTION_VECTOR = False
 APPLY_ATTENTION_BEFORE_LSTM = False
@@ -71,10 +71,10 @@ X_train, X_test, y_train, y_test = train_test_split(questions, patterns, test_si
 # 过采样
 # oversampler = SMOTE(ratio='auto', random_state=np.random.randint(100), k_neighbors=5, m_neighbors=10, kind='regular')
 
-X_train = np.asarray(X_train, dtype='float16')
-X_test = np.asarray(X_test, dtype='float16')
-y_train = np.asarray(y_train, dtype='float16')
-y_test = np.asarray(y_test, dtype='float16')
+X_train = np.asarray(X_train, dtype='float64')
+X_test = np.asarray(X_test, dtype='float64')
+y_train = np.asarray(y_train, dtype='float64')
+y_test = np.asarray(y_test, dtype='float64')
 
 # 过采样，输入一维数据
 # os_X_train, os_y_train = oversampler.fit_sample(X_train.reshape(len(X_train), -1), y_train)
@@ -108,8 +108,8 @@ y_test = keras.utils.to_categorical(y_test)
 
 es = EarlyStopping(monitor='val_loss', patience=2, mode='min', min_delta=0.5)
 inputs = Input(shape=(TIME_STEPS, INPUT_DIM))
-drop_out_1 = Dropout(0.5)(inputs)
-lstm_out = Bidirectional(LSTM(64, return_sequences=True), merge_mode='concat')(drop_out_1)
+drop_out_1 = Dropout(0.35)(inputs)
+lstm_out = Bidirectional(LSTM(54, return_sequences=True), merge_mode='concat')(drop_out_1)
 attention_mul = attention_3d_block(lstm_out)
 attention_flatten = Flatten()(attention_mul)
 output = Dense(units=y_train.shape[1], activation='sigmoid')(attention_flatten)

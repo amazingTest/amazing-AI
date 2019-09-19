@@ -3,7 +3,7 @@ import time
 from sklearn.model_selection import train_test_split
 from keras.layers import Bidirectional
 from keras.callbacks import EarlyStopping
-from sentiment_classification.chinese import preprocess
+from src.sentiment_classification.chinese import preprocess
 # 优化方法选用Adam(其实可选项有很多，如SGD)
 from keras.optimizers import Adam
 from keras.layers.core import *
