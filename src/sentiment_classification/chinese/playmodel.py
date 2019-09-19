@@ -2,9 +2,7 @@ import os
 from keras.models import load_model
 from gensim.models import word2vec
 import numpy as np
-from utils import utils
-from retentionRateWithSearchKeywords import preprocess
-# os.chdir('D:\PycharmProjects\chatbot\chatbot')
+from src.sentiment_classification.chinese import preprocess
 chat_model = load_model('./model/model_best.h5')
 wordVector_model = word2vec.Word2Vec.load('D:/MachineLearning/word2vec/word2vec_wx')
 
