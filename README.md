@@ -8,7 +8,7 @@
 
     pip install -r requirement.txt
 
-下载 word2vec 模型文件，
+下载 word2vec 模型文件
 
 链接: https://pan.baidu.com/s/1RTT7Qe7VVf_pCoPnQxtGfQ
 
