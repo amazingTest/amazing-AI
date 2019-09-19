@@ -30,3 +30,6 @@
 
 ![](https://github.com/amazingTest/amazing-AI/blob/master/images/publicAcount.jpg)
 
+## 捐赠
+
+![](https://github.com/amazingTest/amazing-AI/blob/master/images/wechatDonation.jpg)
