@@ -1,4 +1,4 @@
-from Learning.Perceptron.perceptron import Perceptron
+from utils.Learning import Perceptron
 
 
 # 定义激活函数f

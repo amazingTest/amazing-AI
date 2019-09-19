@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 from sentencepattern_attention import playmodel, config
 from keras.models import load_model
-from Utils import utils
+from utils import utils
 import tensorflow as tf
 app = Flask(__name__)
 

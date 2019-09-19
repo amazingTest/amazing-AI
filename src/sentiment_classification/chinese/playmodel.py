@@ -2,7 +2,7 @@ import os
 from keras.models import load_model
 from gensim.models import word2vec
 import numpy as np
-from Utils import utils
+from utils import utils
 from retentionRateWithSearchKeywords import preprocess
 # os.chdir('D:\PycharmProjects\chatbot\chatbot')
 chat_model = load_model('./model/model_best.h5')
