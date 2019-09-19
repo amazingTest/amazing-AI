@@ -1,6 +1,7 @@
 # amazing-AI
 
 ## 介绍
+![](https://img.shields.io/badge/-%20mad-orange) ![](https://img.shields.io/badge/-%20crazy-grey)![](https://img.shields.io/badge/-%20amazing-blue)
 
 疯狂的机器学习模型试验基地, 储存各种现成的模型训练代码以及训练好的模型
 
