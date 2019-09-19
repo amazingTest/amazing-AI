@@ -20,9 +20,11 @@ with open('./data/sentiment labelled sentences/yelp_labelled.txt') as data:
 
 if __name__ == '__main__':
     # 数据测试
-    print(len(texts) == len(labels))
-    print(all(list(map(lambda x: isinstance(x, int), labels))))
-    print(all(list(map(lambda x: isinstance(x, str) and x, texts))))
+    # print(len(texts) == len(labels))
+    # print(all(list(map(lambda x: isinstance(x, int), labels))))
+    # print(all(list(map(lambda x: isinstance(x, str) and x, texts))))
+    p = 'python'
+    print(''.join(list(reversed([i for i in p]))))
 
 
 
