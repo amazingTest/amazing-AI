@@ -14,7 +14,7 @@
 
 提取码: imdd
 
-然后放至 'C:/MachineLearning/' 路径下
+然后将 **word2vec文件夹** 放至 'C:/MachineLearning/' 路径下
 
-然后即可进入 **src** 找寻你喜欢的模型进行训练 / 使用。
+然后即可进入 **src** 目录找寻你喜欢的模型进行训练 / 使用。
 
