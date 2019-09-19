@@ -3,7 +3,7 @@ from keras.models import load_model
 from gensim.models import word2vec
 import numpy as np
 from src.sentiment_classification.english import preprocess
-chat_model = load_model('./model/model_best.h5')
+chat_model = load_model('./model/model1568725687.h5')
 wordVector_model = word2vec.Word2Vec.load('D:/MachineLearning/word2vec/word2vec_wx')
 
 
