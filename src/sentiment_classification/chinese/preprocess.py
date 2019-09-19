@@ -34,7 +34,7 @@ def seg_sentence(sentence, get_right_part_from_last_comma=False, user_dic_path="
     return outstr.strip()
 
 
-def vectorize(questions, word2vec_path='G:/MachineLearning/word2vec/word2vec_wx'):
+def vectorize(questions, word2vec_path='C:/MachineLearning/word2vec/word2vec_wx'):
     # questions = map(seg_sentence, questions)
     # 导入训练好的词向量
     model = word2vec.Word2Vec.load(word2vec_path)
