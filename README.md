@@ -25,11 +25,3 @@
 ## 开始
 
 现在就可以进入 **src** 目录找寻你喜欢的模型进行训练 / 使用。
-
-## 联系我
-
-![](https://github.com/amazingTest/amazing-AI/blob/master/images/publicAcount.jpg)
-
-## 捐赠
-
-![](https://github.com/amazingTest/amazing-AI/blob/master/images/wechatDonation.jpg)
